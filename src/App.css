@@ -1,0 +1,133 @@
+body {
+  background: rgb(181, 188, 143);
+}
+
+.App {
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.metronome {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 2px 2px 5px #382a05;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  max-width: 500px;
+  margin: auto;
+  background: rgba(117, 82, 5, 0.506);
+  border-radius: 7.5px;
+  box-shadow: 0px 10px 45px black;
+}
+
+.bpm-slider input {
+  margin: 10px;
+  width: 100%;
+}
+
+.bpm-slider input::-webkit-slider-thumb {
+  cursor: pointer;
+}
+
+.metronome button {
+  background: #5e4d1f;
+  padding: 10px;
+  margin-top: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  outline: none;
+  border-radius: 2px;
+  width: 100px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+  transition: .3s;
+  text-transform: uppercase;
+}
+
+.metronome button:hover {
+  background: rgba(122, 116, 37, 0.725);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgba(255, 255, 255, 1);
+  cursor: pointer;
+}
+
+/* measure buttons */
+
+.measure input {
+  margin: 1rem 0 1rem 1.5rem;
+  visibility: hidden;
+}
+
+.measure label {
+  padding-left: .25rem;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  position: relative;
+  float: left;
+  height: 1.75rem;
+  width: 5rem;
+}
+
+ul li input {
+  position: absolute;
+  visibility: hidden;
+}
+
+ul li label {
+  margin: 0 3rem 0 0;
+  position: relative;
+  border-bottom: 1px solid rgba(214, 214, 214, 0.8);
+}
+
+ul li:hover label{
+  color: rgb(255, 255, 255);
+}
+
+ul li .check{
+  display: block;
+  position: absolute;
+  border: 1.5px solid rgb(231, 231, 231);
+  border-radius: 100%;
+  height: 20px;
+  width: 20px;
+  top: -.15rem;
+  left: -1.7rem;
+	z-index: 5;
+	transition: border .25s linear;
+	-webkit-transition: border .25s linear;
+}
+
+ul li .check::before {
+  display: block;
+  position: absolute;
+	content: '';
+  border-radius: 100%;
+  height: 7.5px;
+  width: 7.5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+	transition: all 0.25s linear;
+	-webkit-transition: all 0.25s linear;
+}
+
+input[type=radio]:checked ~ .check {
+  border: 1.5px solid rgb(255, 231, 13);
+}
+
+input[type=radio]:checked ~ .check::before{
+  background: rgb(255, 231, 13);
+}
+
+input[type=radio]:checked ~ label{
+  color: rgb(255, 231, 13);
+  border-bottom: 1px solid rgb(255, 231, 13);
+}
