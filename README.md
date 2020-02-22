@@ -1,3 +1,11 @@
+React Metronome
+
+A simple React metronome project
+
+LIVE DEMO: https://react-metronome-project.netlify.com
+
+*****************
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
